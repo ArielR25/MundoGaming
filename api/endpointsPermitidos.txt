@@ -1,0 +1,4 @@
+GET https://api.rawg.io/api/games
+GET https://api.rawg.io/api/games?search={game}
+GET https://api.rawg.io/api/genres
+GET https://api.rawg.io/api/games/{id}
