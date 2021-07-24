@@ -1,0 +1,14 @@
+.card{
+    display: inline-block;
+    margin: 10px;
+    width: 260px;
+    height: 250px;
+    box-sizing: border-box;
+    background-color: firebrick;
+    position: relative;
+}
+.cardImg{
+    width: 100%;
+    box-sizing: border-box;
+    
+}

@@ -1,0 +1,15 @@
+.alphSort{
+    margin-bottom: 20px;
+}
+.alphTitle{
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 0;
+}
+.alphRadios{
+    border: none;
+    text-align: center;
+}
+.aRadio{
+    margin-left: 10px;
+}

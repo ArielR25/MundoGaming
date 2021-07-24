@@ -1,0 +1,21 @@
+.checkList{
+    background-color: darkviolet;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 30px;
+    width: auto;
+    height: auto;
+    max-height: 200px;
+    overflow: scroll;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.checkListLabel{
+    display: flex;
+    align-items: center;
+    margin: 1px 3px;
+}
+.checkListSpan{
+    margin-left: 3px;
+}

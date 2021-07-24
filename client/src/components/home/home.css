@@ -1,0 +1,74 @@
+.home{
+    display: flex;
+}
+.mainView{
+    background-color:dimgrey ;
+    width: 75%;
+    height: 100vh;
+    display: inline-block;
+}
+.mainTitle{
+    margin: 10px;
+    font-size: 50px;
+    text-align: center;
+}
+.pageControl{
+    background-color: dodgerblue;
+    height: 100vh;
+    flex-direction: column;
+    width: 25%;
+    display: inline-block;
+}
+.search{
+    background-color: goldenrod;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+.filters{
+    background-color: green;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+
+}
+.sort{
+    background-color: indigo;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+.create{
+    background-color:dodgerblue;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+}
+.homeButton{
+    border: none;
+    font-size: 17px;
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+.copyright{
+    background-color:orange;
+    height: 10vh;
+}
+.rightTitles{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.onlyFilters{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}

@@ -1,0 +1,12 @@
+.ratingTitle{
+    text-align: center;
+    font-size: 24px;
+    padding: 5px 0;
+}
+.ratingRadios{
+    border: none;
+    text-align: center;
+}
+.rRadio{
+    margin-left: 10px;
+}

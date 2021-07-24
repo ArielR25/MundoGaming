@@ -1,0 +1,38 @@
+.divForm{
+    display: flex;
+    flex-direction: column;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    border: deepskyblue 1px solid;
+    align-items: center;
+}
+.checks{
+    display: flex;
+    flex-direction: row;
+}
+.formFilter{
+    margin-bottom: 5px;
+    position: relative;
+}
+.formLabel{
+    font-size: 20px;
+    background-color: darkslategrey;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.formInput{
+    display: none;
+}
+.formCheckImg{
+    height: 20px;
+}
+.createdDiv{
+    display: none;
+}
+.failedCreate{
+    display: none;
+}

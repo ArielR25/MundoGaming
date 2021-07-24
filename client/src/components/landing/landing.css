@@ -1,0 +1,28 @@
+.mainDiv{
+    background-image: url('../../img/gaming.jpg');
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+.button{
+    margin: 0;
+    position: absolute;
+    bottom: 30px;
+    padding: 3px 8px;
+    font-size: 17px;
+    font-family:Impact;
+    background-color: #FFF;
+    border: none;
+    border-radius: 3px;
+}
+.button:hover{
+    background-color: #000000;
+    color: #FFF;
+    border: #fff solid 1px;
+}

@@ -1,0 +1,29 @@
+.search{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+.searchForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.labelcss{
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+.searchText{
+    margin-bottom: 5px;
+    padding: 3px 2px;
+    border: none;
+    border-radius: 3px;
+}
+.searchButton{
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: none;
+}
+.searchButton:active{
+    background-color:darkslategrey ;
+}
