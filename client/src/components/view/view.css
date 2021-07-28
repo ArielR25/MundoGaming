@@ -2,3 +2,35 @@
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
 }
+.pagination{
+    width: 29%;
+    display: inline-block;
+    position: absolute;
+    top: 15px;
+    right: -18px;
+    text-align: center;
+}
+
+/* boton general no olvidarse */
+.Button2{
+    position: relative;
+    overflow: visible;
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #e74c3c;
+    margin: 10px;
+    text-align: center;
+    font-size:20px;
+    cursor: pointer;
+    outline: none;
+    background-color: black;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    zoom: 1;
+    *display: inline;
+    color: #e74c3c;
+    font-family:'Arial';
+    text-shadow:black;
+    box-shadow:black;
+}

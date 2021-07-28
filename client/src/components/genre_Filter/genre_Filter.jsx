@@ -39,10 +39,10 @@ export function Genre_Filter (props) {
                     onChange={() => genreCheck()}
                 />
                 <img className='genreCheckImg' src={checkbox} alt='icono de busqueda de filtro de generos' />
-                Generos
+                <span className='radioSpan'>Generos</span>
             </label>
             <CheckList items={props.genres} id='genreList' type='g'/>
-            <button id='genreButton' className='genreButton' onClick={genreCheckLooks}>Filtrar</button>
+            <button id='genreButton' className='Buton3' onClick={genreCheckLooks}>Filtrar</button>
         </div>
     )
 }

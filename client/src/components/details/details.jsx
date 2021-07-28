@@ -1,6 +1,7 @@
 import './details.css';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
 function getFormatedData(data=[]) {
         
@@ -29,14 +30,24 @@ export function Details ({ details }) {
     if(!details.image) return <p>Cargando...</p>
     
     return (
-        <div className='details'>
-            <img src={image} alt={`logo del juego: ${name}`} />
-            <h2>{name}</h2>
-            <p><span>Valoración: </span>{rating}</p>
-            <p><span>Fecha de creación: </span>{released}</p>
-            <p><span>Generos: </span>{getFormatedData(genres)}</p>
-            <p><span>Plataformas: </span>{getFormatedData(platforms)}</p>
-            <p><span>Descripción:</span>{getDescription(description)}</p>
+        <div>
+            <Link to='/home'>
+                <button className='Buton4'>Home</button>
+            </Link>
+            <div className='generalDetails'>
+                <div className='details'>
+                    <img className='detailsImg' src={image} alt={`logo del juego: ${name}`} />
+                    <h2 className='detailsName'>{name}</h2>
+                    <p><span className='leftContent'>Valoración: </span><span className='rightContent'>{rating}</span></p>
+                    <p><span className='leftContent'>Fecha de creación: </span><span className='rightContent'>{released}</span></p>
+                    <p><span className='leftContent'>Generos: </span><span className='rightContent'>{getFormatedData(genres)}</span></p>
+                    <p><span className='leftContent'>Plataformas: </span><span className='rightContent'>{getFormatedData(platforms)}</span></p>
+                </div>
+                <p className='detailsDescription'>
+                    <span className='detailsDescriptionTitle'>Descripción:</span>
+                    <span className='detailsDescriptionContent'>{getDescription(description)}</span>
+                    </p>
+            </div>
         </div>
     )
 }

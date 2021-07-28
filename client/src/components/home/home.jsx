@@ -37,15 +37,15 @@ export function Home (props) {
                     <Route path='/home' component={Search}/>
                 </div>
                 <div className='filters'>
-                    <h3 className='rightTitles'>Filtros</h3>
+                    <h3 className='rightTitles1'>Filtros</h3>
                     <div className='onlyFilters'>
                         <Route path='/home' component={GenreFilter}/>
                         <Route path='/home' component={OriginFilter}/>
                     </div>
-                    <button className='homeButton' onClick={cleanFiltersFunction}>Limpiar filtros</button>
+                    <button className='Buton3' onClick={cleanFiltersFunction}>Limpiar filtros</button>
                 </div>
                 <div className='sort'>
-                    <h3 className='rightTitles'>Ordenar</h3>
+                    <h3 className='rightTitles2'>Ordenar</h3>
                     <div className='onlyRadios'>
                         <Route path='/home' component={AlphSort}/>
                         <Route path='/home' component={RatingSort}/>
@@ -54,7 +54,7 @@ export function Home (props) {
                 <div className='create'>
                     <h3 className='rightTitles'>Crear</h3>
                     <Link to='/home/form'>
-                        <button className='homeButton'>Crear</button>
+                        <button className='Buton3'>Crear</button>
                     </Link>
                 </div>
                 <div className='copyright'>

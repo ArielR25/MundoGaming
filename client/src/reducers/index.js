@@ -22,13 +22,6 @@ const store = {
 
 function rootReducer(state = store, action) {
 
-    if(action.type === GAMES_SEARCH) {
-        return {
-            ...state,
-            filteredGames: state.filteredGames.filter( filtered => filtered.name.toLowerCase().includes(action.payload.toLowerCase()) )
-        }
-    }
-
     if (action.type === GAMES_LOAD) {
         return {
             ...state,
@@ -60,6 +53,13 @@ function rootReducer(state = store, action) {
                     name
                 }
             })
+        }
+    }
+
+    if(action.type === GAMES_SEARCH) {
+        return {
+            ...state,
+            filteredGames: state.filteredGames.filter( filtered => filtered.name.toLowerCase().includes(action.payload.toLowerCase()) )
         }
     }
 

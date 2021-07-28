@@ -7,7 +7,7 @@ import { loadGames, loadGenres, loadPlatforms } from '../../actions';
 
 /* function sound() {
   console.log("aidudooooooo")
-    let audio = new Audio('insertCoin')
+    let audio = new Audio('../../audio/insertCoin.mp3')
     console.log(audio)
     audio.play()
 } */
@@ -26,8 +26,9 @@ export function Landing() {
   return (
     <div className='mainDiv'>
         <Link to='/home' >
-            <button className='button' /* onClick={sound} */>Insert Coin</button>
+            <button id='boton' className='button'  /* onClick={sound} */ >Insert Coin</button>
         </Link>
+        <audio src=""></audio>
     </div>
   )
 };

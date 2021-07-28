@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import VideoCard from '../videoCard/videoCard';
 
-const CANT_GAMES = 12;
+const CANT_GAMES = 8;
 
 export function View ({ filteredGames, forRender }) {
 
@@ -44,8 +44,8 @@ export function View ({ filteredGames, forRender }) {
     return (
         <div className='view'>
             <div className='pagination'>
-                <button onClick={prevHandler}> Prev </button>
-                <button onClick={nextHandler}> Next </button>
+                <button className = 'Button2' onClick={prevHandler}> Anterior </button>
+                <button className = 'Button2' onClick={nextHandler}> Siguiente </button>
             </div>
             <div className='cardsZone'>
                 <VideoCard pagedGames={ pagedGames } />                

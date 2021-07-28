@@ -16,16 +16,15 @@ export function VideoCard ({ pagedGames, details }) {
     return (
         pagedGames.map( game => {
             const { id, image, name, genres, rating } = game
-            
             return (
                 <li key={id} className='card'>
                     <img className='cardImg' src={image} alt={name}/>
-                    <p>{name}</p>
-                    <p>Valoración: {rating}</p>
-                    <p>Generos:</p>
-                    <p>{genresToString(genres)}</p>
+                    <p className='p'>{name}</p>
+                    <p className='p'>Valoración: {Number(rating)}</p>
+                    <p className='p'>Generos:</p>
+                    <p className='p'>{genresToString(genres)}</p>
                     <Link to='/home/details'>
-                        <button onClick={() => details(id)}>Detalles</button>
+                        <button className='Button' onClick={() => details(id)}>Detalles</button>
                     </Link>
                 </li>
             )

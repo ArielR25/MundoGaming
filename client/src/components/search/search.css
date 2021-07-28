@@ -14,16 +14,22 @@
     margin-bottom: 5px;
 }
 .searchText{
+    background-color: rgb(211, 208, 208);
+    border:none;
     margin-bottom: 5px;
     padding: 3px 2px;
     border: none;
     border-radius: 3px;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display :block;
+    width: 300px;
+    
 }
-.searchButton{
-    padding: 3px 5px;
-    border-radius: 3px;
-    border: none;
-}
+
+
+
+
 .searchButton:active{
     background-color:darkslategrey ;
 }

@@ -43,10 +43,10 @@ export function Origin_Filter (props) {
                 onChange={() => originCheck()}
                 />
                 <img className='originCheckImg' src={checkbox} alt='icono de busqueda de filtro de origen' />
-                Origen
+                <span className='radioSpan'>Origen</span>
             </label>
             <CheckList items={origin} id='originList' type='o'/>
-            <button id='originButton' className='originButton' onClick={originCheckLooks}>Filtrar</button>
+            <button id='originButton' className='Buton3' onClick={originCheckLooks}>Filtrar</button>
         </div>
     )
 }

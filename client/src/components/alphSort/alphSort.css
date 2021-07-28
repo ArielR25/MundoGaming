@@ -2,14 +2,29 @@
     margin-bottom: 20px;
 }
 .alphTitle{
-    text-align: center;
-    font-size: 24px;
-    padding: 5px 0;
+    font-size: 25px;
+    margin-top:25px;
+    letter-spacing: 8px;
+    font-family: 'Bebas Neue', cursive;
+    flex-direction: column;
+    display: inline-block;
+    text-shadow: 0 0 4px #0a0a09, 0 0 4px #0f0e0e;
+    color:rgb(251, 251, 51);
+    line-height:1px;
+
 }
 .alphRadios{
+    display: flex;
+    flex-direction: column;
     border: none;
     text-align: center;
 }
 .aRadio{
     margin-left: 10px;
+}
+.radioSpan{
+    color:white;
+    margin-left:10px;
+    text-shadow:black, 5px;
+    font-size:20px;
 }

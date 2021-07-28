@@ -24,11 +24,13 @@ export function Form(props) {
             const { id } = genre;
             let genres = document.getElementById('gf'+id);
                 genres.checked = false;
+            return true;
         })
         props.platforms.map( plat => {
             const { id } = plat;
             let genres = document.getElementById('pf'+id);
                 genres.checked = false;
+            return true;
         })
     }
 
@@ -63,16 +65,16 @@ export function Form(props) {
         }
         fetch( URL_FORM, info )
             .then(res => res.json())
-            .then(res =>  { console.log(res)
-                
+            .then(res =>  {
                 if(res.id.includes('-')){
-                    const { id, image, name } = res
+                    const { id, image, name, rating } = res
                     document.getElementById('failedCreate').style.display = 'none'
-                    document.getElementById('createdDiv').style.display = 'block'
+                    document.getElementById('createdDiv').style.display = 'inline-block'
                     setCreatedGame([{
                         id,
                         image,
                         name,
+                        rating,
                         genres: genres
                     }])
                 }else {
@@ -86,68 +88,69 @@ export function Form(props) {
     return (
         <div className='divForm'>
             <Link to='/home'>
-                <button>Home</button>
+                <button className='Buton4'>Home</button>
             </Link>
-            <form className='form' onSubmit={handleSubmit} >
-                <label htmlFor="name">
-                    <span>Nombre</span>
-                    <input type="text" id='name' name='name'/>
-                </label>
-                <label htmlFor="description">
-                    <span>Descripcion</span>
-                    <textarea id='description' name='description'></textarea>
-                </label>
-                <label htmlFor="released">
-                    <span>Fecha de Creación</span>
-                    <input type="text" id='released'name='released'/>
-                </label>
-                <label htmlFor="rating">
-                    <span>Puntuación</span>
-                    <input type="text" id='rating' name='rating'/>
-                </label>
-                <label htmlFor="image">
-                    <span>Imagen URL:</span>
-                    <input type="text" id='image' name='image'/>
-                </label>
-                <div className='checks'>
-                    <div className='formFilter'>
-                        <label htmlFor='genresFormBox' className='formLabel'>
-                            <input 
-                                type="checkbox" 
-                                id="genresFormBox" 
-                                value="first_checkbox" 
-                                className='formInput'
-                                onChange={() => formCheck('genresFormBox', 'genresFormList')}
-                            />
-                            <img className='formCheckImg' src={checkbox} alt='icono de busqueda de filtro de generos' />
-                            Generos
-                        </label>
-                        <CheckList items={props.genres} id='genresFormList' type='gf'/>
+            <div className='divFormZone'>
+                <form className='form' onSubmit={handleSubmit} >
+                    <label className='labelForm' htmlFor="name">
+                        <span className='nombre'>Nombre</span>
+                        <input className='formInputs' type="text" id='name' name='name'/>
+                    </label>
+                    <label className='labelForm' htmlFor="description">
+                        <span className='nombre'>Descripcion</span>
+                        <textarea className='formTextArea' id='description' name='description'></textarea>
+                    </label>
+                    <label className='labelForm' htmlFor="released">
+                        <span className='nombre'>Fecha de Creación</span>
+                        <input className='formInputs' type="text" id='released'name='released'/>
+                    </label>
+                    <label className='labelForm' htmlFor="rating">
+                        <span className='nombre'>Puntuación</span>
+                        <input className='formInputs' type="text" id='rating' name='rating'/>
+                    </label>
+                    <label className='labelForm' htmlFor="image">
+                        <span className='nombre'>Imagen URL:</span>
+                        <input className='formInputs' type="text" id='image' name='image'/>
+                    </label>
+                    <div className='checks'>
+                        <div className='formFilter'>
+                            <label htmlFor='genresFormBox' className='labelFormButton'>
+                                <input 
+                                    type="checkbox" 
+                                    id="genresFormBox" 
+                                    value="first_checkbox" 
+                                    className='formInput'
+                                    onChange={() => formCheck('genresFormBox', 'genresFormList')}
+                                />
+                                <img className='formCheckImg' src={checkbox} alt='icono de busqueda de filtro de generos' />
+                                <span className='textFormButton'>Generos</span>
+                            </label>
+                            <CheckList items={props.genres} className='formList' id='genresFormList' type='gf'/>
+                        </div>
+                        <div className='formFilter'>
+                            <label htmlFor='platformsFormBox' className='labelFormButton'>
+                                <input 
+                                    type="checkbox" 
+                                    id="platformsFormBox" 
+                                    value="first_checkbox" 
+                                    className='formInput'
+                                    onChange={() => formCheck('platformsFormBox', 'platformsFormList')}
+                                />
+                                <img className='formCheckImg' src={checkbox} alt='icono de busqueda de filtro de generos' />
+                                <span className='textFormButton'>Plataformas</span>
+                            </label>
+                            <CheckList items={props.platforms} className='formList' id='platformsFormList' type='pf'/>
+                        </div>
                     </div>
-                    <div className='formFilter'>
-                        <label htmlFor='platformsFormBox' className='formLabel'>
-                            <input 
-                                type="checkbox" 
-                                id="platformsFormBox" 
-                                value="first_checkbox" 
-                                className='formInput'
-                                onChange={() => formCheck('platformsFormBox', 'platformsFormList')}
-                            />
-                            <img className='formCheckImg' src={checkbox} alt='icono de busqueda de filtro de generos' />
-                            Plataformas
-                        </label>
-                        <CheckList items={props.platforms} id='platformsFormList' type='pf'/>
-                    </div>
+                    <input className='createFormButton' type="submit" value='Crear' />
+                </form>
+                <div id='createdDiv' className='createdDiv'>
+                    <VideoCard pagedGames={createdGame}/>
                 </div>
-                <input type="submit" value='Crear' />
-            </form>
-            <div id='createdDiv' className='createdDiv'>
-                <VideoCard pagedGames={createdGame}/>
+                <p id='failedCreate' className='failedCreate'>Creación de video juego fallida</p>
             </div>
-            <p id='failedCreate' className='failedCreate'>Creación de video juego fallida</p>
         </div>
-    )
-}
+    )}
 
 function mapStateToProps(state) {
     return {

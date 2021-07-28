@@ -3,6 +3,7 @@ import React from 'react';
 import { Route } from 'react-router';
 import Landing from './components/landing/landing';
 import Home from './components/home/home';
+import { BrowserRouter } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
 
       {/* todo el contenido de la página */}
       <Route path='/home' component ={Home}/>
-
+      
     </div>
   );
 }

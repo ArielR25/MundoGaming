@@ -18,11 +18,11 @@ export function RatingSort(props) {
                     <fieldset className='ratingRadios' >
                         <label className='rRadio'>
                             <input type="radio" name="rating" value="higher" onClick={whoSelected}/>
-                            <span>Mayor</span>
+                            <span class='radioSpan'>Mayor</span>
                         </label>
                         <label className='rRadio'>
                             <input type="radio" name="rating" value="lower" onClick={whoSelected}/>
-                            <span>Menor</span>
+                            <span class='radioSpan'>Menor</span>
                         </label>
                     </fieldset>
                 </form>

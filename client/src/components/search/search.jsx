@@ -13,7 +13,7 @@ export function Search (props) {
         <div className='search'>
             <form className='searchForm'>
                 <input type='text' id='searchText' className='searchText'/>
-                <button className='searchButton' onClick={(e) => searchFuncion(e)}>Buscar</button>
+                <button className='Buton3' onClick={(e) => searchFuncion(e)}>Buscar</button>
             </form>
         </div>
     )

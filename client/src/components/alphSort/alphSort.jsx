@@ -18,11 +18,11 @@ export function AlphSort(props) {
                     <fieldset className='alphRadios' >
                         <label className='aRadio'>
                             <input type="radio" name="alph" value="asc" onClick={whoSelected} />
-                            <span>Ascendente</span>
+                            <span className='radioSpan'>A - Z</span>
                         </label>
                         <label className='aRadio'>
                             <input type="radio" name="alph" value="desc" onClick={whoSelected} />
-                            <span>Descendente</span>
+                            <span className='radioSpan'>Z - A</span>
                         </label>
                     </fieldset>
                 </form>
