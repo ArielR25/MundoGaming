@@ -50,7 +50,8 @@ router.get('/plataformas', async (req, res) => {
         //         })
         //     })
         
-            return res.sendStatus(200)
+        const platforms = await Plataforma.findAll();
+        return res.status(200).json(platforms);
     }catch(e){
         return res.status(400).json(e)
     }

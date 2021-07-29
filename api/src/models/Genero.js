@@ -5,7 +5,7 @@ const { DataTypes } = require('sequelize');
 module.exports = (sequelize) => {
   // defino el modelo
     sequelize.define('genero', {
-        ID: {
+        id: {
             type: DataTypes.INTEGER,
             autoIncrement: true,
             primaryKey: true,
@@ -13,6 +13,7 @@ module.exports = (sequelize) => {
         },
         name: {
             type: DataTypes.STRING,
+            allowNull: false,
         }
     });
 };

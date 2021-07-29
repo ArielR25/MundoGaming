@@ -4,7 +4,6 @@
     flex-direction: column;
     position: absolute;
     top: 30px;
-    width: auto;
     height: auto;
     max-height: 200px;
     overflow: scroll;

@@ -5,8 +5,7 @@ const { Videogame } = require ('../db.js');
 //const fetch = require('node-fetch')
 
 router.post('/videogame', async (req, res) => {
-    console.log(req.body)
-    const { image, name, genre, description, released, rating, plat } = req.body;
+    const { image, name, description, released, rating, genre, plat } = req.body;
     try{
         const video = await Videogame.create({
             image,
@@ -17,10 +16,11 @@ router.post('/videogame', async (req, res) => {
         })
         await video.addGenero(genre)
         await video.addPlataforma(plat)
+
         res.status(200).json(video)
     }
-    catch(e){
-        res.status(400).json(e)
+    catch{
+        res.status(400).json({id:'false'})
     }
 })
 

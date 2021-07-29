@@ -18,13 +18,12 @@ module.exports = (sequelize) => {
     },
     description: {
       type: DataTypes.TEXT,
-      allowNull: false,
     },
     released: {
       type: DataTypes.DATE,
     },
     rating: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.DECIMAL,
     },
     image: {
       type: DataTypes.STRING,

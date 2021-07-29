@@ -17,7 +17,6 @@
     background-clip: padding-box;
     border-radius: 0.2em;
     zoom: 1;
-    *display: inline;
     color: #e74c3c;
     font-family:'Arial';
     text-shadow:black;
@@ -49,9 +48,10 @@
 
 .detailsDescription{
     padding: 6px;
-    background-color: rgba(63, 61, 61, 0.6);
     border-radius: 3px;
-
+    display: flex;
+    flex-direction: column;
+    height: 750px;
 }
 .detailsDescriptionTitle{
     text-decoration: underline;
@@ -71,4 +71,6 @@
     font-size: 25px;
     color:rgb(251, 251, 51);
     line-height:40px;
+    overflow: hidden;
+    overflow-y: auto;
 }

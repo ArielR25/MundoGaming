@@ -5,6 +5,7 @@ import CheckList from '../checkList/checkList';
 import VideoCard from '../videoCard/videoCard';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { loadGames } from '../../actions'
 
 function formCheck( id, form) {
     let check = document.getElementById(id)
@@ -19,7 +20,7 @@ export function Form(props) {
 
     const [ createdGame, setCreatedGame ] = useState([{genres:[]}])
 
-    function clearchecks(e) {
+    function clearchecks() {
         props.genres.map( genre => {
             const { id } = genre;
             let genres = document.getElementById('gf'+id);
@@ -41,21 +42,26 @@ export function Form(props) {
         const genre = [];
         const genres = [];
         const plat = [];
+        const platforms = [];
 
         for(let i=0 ; i < e.target.length ; i++) {
             data[e.target[i].id] = e.target[i].value
             
             if( e.target[i].id.includes('gf') && e.target[i].checked ) {
-                genre.push(Number(e.target[i].id.slice(2)));
-                genres.push( {name: e.target[i].name} )
+                genre.push(e.target[i].id.slice(2));
+                genres.push( {id: e.target[i].id.slice(2), name: e.target[i].name} )
             }
             if( e.target[i].id.includes('pf') && e.target[i].checked ) {
-                plat.push(Number(e.target[i].id.slice(2)));
+                plat.push(e.target[i].id.slice(2));
+                platforms.push( {id: e.target[i].id.slice(2), name: e.target[i].name} )
             }
         }
+        //genre y plat son para mandar en data al back
+        //el back necesita un array de strings con el nombre indicado
         data.genre = genre;
         data.plat = plat;
 
+        //aqui evio data al back
         const info = {
             method: 'POST',
             body: JSON.stringify(data),
@@ -65,23 +71,36 @@ export function Form(props) {
         }
         fetch( URL_FORM, info )
             .then(res => res.json())
-            .then(res =>  {
-                if(res.id.includes('-')){
-                    const { id, image, name, rating } = res
-                    document.getElementById('failedCreate').style.display = 'none'
-                    document.getElementById('createdDiv').style.display = 'inline-block'
-                    setCreatedGame([{
-                        id,
-                        image,
-                        name,
-                        rating,
-                        genres: genres
-                    }])
-                }else {
+            .then(res =>  { console.log(res)
+                try{
+                    //if(res.id.includes('-')){
+                        const { id, image, name, rating } = res
+                        document.getElementById('failedCreate').style.display = 'none'
+                        document.getElementById('createdDiv').style.display = 'inline-block'
+                        setCreatedGame([{
+                            id,
+                            image,
+                            name,
+                            rating,
+                            genres: genres,
+                            plat: plat
+                        }])
+                    //}
+                }catch {
                     document.getElementById('failedCreate').style.display = 'block'
                     document.getElementById('createdDiv').style.display = 'none'
                 }
             })
+
+        //genres y plats son para mandar data al store, para que renderizen cuando se crean
+        //el front necesita un array de objetos de la forma [{id,name}]
+        data.genres = genres;
+        data.platforms = platforms;
+        
+        //aqui recargo el store para tener disponible el nuevo juego
+        props.loadGames(data)
+
+        //aqui limpio los campos generos y plataformas tildados de la lista
         clearchecks()
     }
 
@@ -159,4 +178,4 @@ function mapStateToProps(state) {
     }
 }
 
-export default connect( mapStateToProps, null )(Form);
+export default connect( mapStateToProps, { loadGames } )(Form);

@@ -14,15 +14,16 @@ router.get('/genres', async (req, res) => {
                 genres.map(genre => {
                     Genero.findOrCreate({
                         where: {
-                            ID: genre.id,
+                            id: genre.id,
                             name: genre.name
                         }
                     })
                 })
             })
-            return res.sendStatus(200)
-    }catch{
-        return res.sendStatus(400)
+        let genres = await Genero.findAll()
+        return res.status(200).json(genres)
+    }catch(e){
+        return res.status(400).json(e)
     }
 })
 

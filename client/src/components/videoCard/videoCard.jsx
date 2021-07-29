@@ -19,13 +19,16 @@ export function VideoCard ({ pagedGames, details }) {
             return (
                 <li key={id} className='card'>
                     <img className='cardImg' src={image} alt={name}/>
-                    <p className='p'>{name}</p>
-                    <p className='p'>Valoración: {Number(rating)}</p>
-                    <p className='p'>Generos:</p>
-                    <p className='p'>{genresToString(genres)}</p>
-                    <Link to='/home/details'>
-                        <button className='Button' onClick={() => details(id)}>Detalles</button>
-                    </Link>
+                    <div className='contentCard'>
+                        <p className='p'>{name}</p>
+                        <p className='p'>Valoración: {Number(rating)}</p>
+                        <p className='p'>Generos: {genresToString(genres)}</p>
+                    </div>
+                    <div className='buttonDiv'>
+                        <Link to='/home/details'>
+                            <button className='Button' onClick={() => details(id)}>Detalles</button>
+                        </Link>
+                    </div>
                 </li>
             )
         })

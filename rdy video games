@@ -1,0 +1,19 @@
+{
+    "image":"https://drive.google.com/file/d/1FGffSk231PsVqGnGvqqeZUXxAXaAS3S7/view?usp=sharing",
+    "name":"Grand Theft Ariel",
+    "description":"le gusta comer asado!",
+    "released":"1987-25-02",
+    "rating":10,
+    "genre":[4,3,7],
+    "plat":[5,4,6]
+}
+
+{
+    "name":"Super Henry Bross",
+    "image":"https://hypernoir.com/wp-content/uploads/2020/11/Henry.png",
+    "description":"un juego de aventuras por las webs",
+    "released":"2020-03-03",
+    "rating":10,
+    "genre":[4,3,7],
+    "plat":[5,4,6]
+}

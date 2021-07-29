@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 function getFormatedData(data=[]) {
-        
         const formatedData = data.map( d => {
             return d.name
         })
@@ -22,7 +21,11 @@ function getFormatedData(data=[]) {
 
 export function Details ({ details }) {
     
-    const { description, genres, image, name, platforms, rating, released } = details;
+    let { description, genres, image, name, platforms, rating, released, generos, plataformas } = details;
+    
+    genres = genres || generos;
+    platforms = platforms || plataformas;
+    released = released ? released.slice(0,10) : null;
 
     useEffect( () => {
     },[ details ])
@@ -43,10 +46,10 @@ export function Details ({ details }) {
                     <p><span className='leftContent'>Generos: </span><span className='rightContent'>{getFormatedData(genres)}</span></p>
                     <p><span className='leftContent'>Plataformas: </span><span className='rightContent'>{getFormatedData(platforms)}</span></p>
                 </div>
-                <p className='detailsDescription'>
+                <div className='detailsDescription'>
                     <span className='detailsDescriptionTitle'>Descripción:</span>
-                    <span className='detailsDescriptionContent'>{getDescription(description)}</span>
-                    </p>
+                    <p className='detailsDescriptionContent'>{getDescription(description)}</p>
+                </div>
             </div>
         </div>
     )
