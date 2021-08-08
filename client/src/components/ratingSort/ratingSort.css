@@ -11,3 +11,12 @@
     align-items: center;
     justify-content: space-around;
 }
+.rRadio{
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* radioSpan esta en components/alphSort/alphSort.css */
+/* h4Titles esta en App.css */

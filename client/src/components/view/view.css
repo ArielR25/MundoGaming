@@ -1,15 +1,21 @@
+.view{
+    position: relative;
+}
 .cardsZone{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
 }
 .pagination{
-    width: 29%;
+    width: 300px;
     display: inline-block;
     position: absolute;
-    top: 15px;
-    right: -18px;
-    text-align: center;
+    top: -70px;
+    right: 0;
+    display: flex;
+    justify-content: left;
 }
 /* botones de paginación */
 .Button2{

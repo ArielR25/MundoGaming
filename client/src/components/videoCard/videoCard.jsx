@@ -11,7 +11,20 @@ function genresToString(genres) {
     return genString;
 }
 
+function hidesSideBar(){
+    let pageControl = document.getElementById('pageControl');
+    let mainView = document.getElementById('mainView');
+
+    pageControl.style.right = '-1000px';
+    mainView.style.width = '100%';
+}
+
 export function VideoCard ({ pagedGames, details }) {
+
+    function todos(id){
+        details(id);
+        hidesSideBar();
+    }
 
     return (
         pagedGames.map( game => {
@@ -26,7 +39,7 @@ export function VideoCard ({ pagedGames, details }) {
                     </div>
                     <div className='buttonDiv'>
                         <Link to='/home/details'>
-                            <button className='Button' onClick={() => details(id)}>Detalles</button>
+                            <button className='Button' onClick={ () => todos(id) }>Detalles</button>
                         </Link>
                     </div>
                 </li>

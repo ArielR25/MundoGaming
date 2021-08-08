@@ -78,6 +78,7 @@
 }
 .createdDiv{
     display: none;
+    margin: auto;
 }
 .failedCreate{
     display: none;

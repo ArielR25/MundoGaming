@@ -23,7 +23,7 @@ export function Home (props) {
     <div className='home'>
 
         {/* zona de contenido, aqui se ven los video juegos */}
-        <div className='mainView'>
+        <div id='mainView' className='mainView'>
                 <h1 className='mainTitle' >GAMING</h1>
                 <Route exact path='/home' component={View}/>
                 <Route path='/home/details' component={Details}/>
@@ -31,7 +31,7 @@ export function Home (props) {
         </div>
 
         {/* menú de control de la página, aqui se realizan las busquedas, filtrados y ordenamientos */}
-        <div className='pageControl'>
+        <div id='pageControl' className='pageControl'>
                 <div className='search'>
                     <h3 className='h3Titles'>Buscar</h3>
                     <Route path='/home' component={Search}/>

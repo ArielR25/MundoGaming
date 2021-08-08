@@ -13,7 +13,7 @@ export function RatingSort(props) {
     return (
         <div className='ratingSort'>
             <h4 className='h4Titles'>Valoración</h4>
-            <form>
+            <form className='ratingForm'>
                 <fieldset className='ratingRadios' >
                     <label className='rRadio'>
                         <input type="radio" name="rating" value="higher" onClick={whoSelected}/>

@@ -1,6 +1,8 @@
 .generalDetails{
     display: flex;
     background-color: rgba(63, 61, 61, 0.4);
+    opacity: 1;
+    transition: all 0.8s ease-in-out;
 }
 .details{
     display: flex;

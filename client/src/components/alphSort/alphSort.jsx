@@ -13,20 +13,18 @@ export function AlphSort(props) {
     return (
         <div className='alphSort'>
             <h4 className='h4Titles'>Alfabeticamente</h4>
-            <div className='alphOptions'>
-                <form>
-                    <fieldset className='alphRadios' >
-                        <label className='aRadio'>
-                            <input type="radio" name="alph" value="asc" onClick={whoSelected} />
-                            <span className='radioSpan'>A - Z</span>
-                        </label>
-                        <label className='aRadio'>
-                            <input type="radio" name="alph" value="desc" onClick={whoSelected} />
-                            <span className='radioSpan'>Z - A</span>
-                        </label>
-                    </fieldset>
-                </form>
-            </div>
+            <form>
+                <fieldset className='alphRadios' >
+                    <label className='aRadio'>
+                        <input type="radio" name="alph" value="asc" onClick={whoSelected} />
+                        <span className='radioSpan'>A - Z</span>
+                    </label>
+                    <label className='aRadio'>
+                        <input type="radio" name="alph" value="desc" onClick={whoSelected} />
+                        <span className='radioSpan'>Z - A</span>
+                    </label>
+                </fieldset>
+            </form>
         </div>
     )
 }

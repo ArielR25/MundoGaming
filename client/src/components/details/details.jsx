@@ -19,6 +19,14 @@ function getFormatedData(data=[]) {
         return description
     }
 
+function showSideBar() {
+    let pageControl = document.getElementById('pageControl');
+    let mainView = document.getElementById('mainView');
+    
+    pageControl.style.right = '0px';
+    mainView.style.width = '75%';
+}
+
 export function Details ({ details }) {
     
     let { description, genres, image, name, platforms, rating, released, generos, plataformas } = details;
@@ -33,11 +41,11 @@ export function Details ({ details }) {
     if(!details.image) return <p>Cargando...</p>
     
     return (
-        <div>
+        <div id='detailsDiv'>
             <Link to='/home'>
-                <button className='Button4'>Home</button>
+                <button onClick={() => showSideBar()} className='Button4'>Home</button>
             </Link>
-            <div className='generalDetails'>
+            <div id='generalDetails' className='generalDetails'>
                 <div className='details'>
                     <img className='detailsImg' src={image} alt={`logo del juego: ${name}`} />
                     <h2 className='detailsName'>{name}</h2>

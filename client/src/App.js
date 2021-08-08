@@ -6,7 +6,7 @@ import Home from './components/home/home';
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       
       {/* landing page, presentacion del sitio */}
       <Route exact path='/' component = {Landing} />
