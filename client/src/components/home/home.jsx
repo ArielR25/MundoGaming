@@ -33,28 +33,28 @@ export function Home (props) {
         {/* menú de control de la página, aqui se realizan las busquedas, filtrados y ordenamientos */}
         <div className='pageControl'>
                 <div className='search'>
-                    <h3 className='rightTitles'>Buscar</h3>
+                    <h3 className='h3Titles'>Buscar</h3>
                     <Route path='/home' component={Search}/>
                 </div>
                 <div className='filters'>
-                    <h3 className='rightTitles1'>Filtros</h3>
+                    <h3 className='h3Titles'>Filtros</h3>
                     <div className='onlyFilters'>
                         <Route path='/home' component={GenreFilter}/>
                         <Route path='/home' component={OriginFilter}/>
                     </div>
-                    <button className='Buton3' onClick={cleanFiltersFunction}>Limpiar filtros</button>
+                    <button className='Button3' onClick={cleanFiltersFunction}>Limpiar filtros</button>
                 </div>
                 <div className='sort'>
-                    <h3 className='rightTitles2'>Ordenar</h3>
+                    <h3 className='h3Titles'>Ordenar</h3>
                     <div className='onlyRadios'>
                         <Route path='/home' component={AlphSort}/>
                         <Route path='/home' component={RatingSort}/>
                     </div>
                 </div>
                 <div className='create'>
-                    <h3 className='rightTitles'>Crear</h3>
+                    <h3 className='h3Titles'>Crear</h3>
                     <Link to='/home/form'>
-                        <button className='Buton3'>Crear</button>
+                        <button className='Button3'>Crear</button>
                     </Link>
                 </div>
                 <div className='copyright'>

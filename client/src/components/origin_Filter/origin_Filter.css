@@ -1,14 +1,11 @@
 .originFilter{
-    margin-bottom: 5px;
     position: relative;
 }
 .originLabel{
     font-size: 20px;
-    
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
 }
 .originInput{
     display: none;
@@ -16,3 +13,5 @@
 .originCheckImg{
     height: 20px;
 }
+
+/* Button3 styles in App.css*/

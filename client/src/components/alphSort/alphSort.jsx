@@ -12,7 +12,7 @@ export function AlphSort(props) {
     
     return (
         <div className='alphSort'>
-            <h4 className='alphTitle'>Alfabeticamente</h4>
+            <h4 className='h4Titles'>Alfabeticamente</h4>
             <div className='alphOptions'>
                 <form>
                     <fieldset className='alphRadios' >

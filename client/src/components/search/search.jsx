@@ -10,12 +10,10 @@ export function Search (props) {
         props.gamesSearch(gameName)
     }
     return (
-        <div className='search'>
-            <form className='searchForm'>
-                <input type='text' id='searchText' className='searchText'/>
-                <button className='Buton3' onClick={(e) => searchFuncion(e)}>Buscar</button>
-            </form>
-        </div>
+        <form className='searchForm'>
+            <input type='text' id='searchText' className='searchText'/>
+            <button className='Button3' onClick={(e) => searchFuncion(e)}>Buscar</button>
+        </form>
     )
 }
 

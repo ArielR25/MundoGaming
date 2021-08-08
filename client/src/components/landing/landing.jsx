@@ -4,14 +4,12 @@ import {Link} from 'react-router-dom';
 import { useDispatch } from 'react-redux'; 
 import { loadGames, loadGenres, loadPlatforms } from '../../actions';
 
-
-/* function sound() {
+/* async function sound() {
+  let audio = new Audio('C:/Users/Ariel/Documents/informatica/Henry/cursado/PI/PI-Videogames/client/src/audio/insertCoin.wav')
   console.log("aidudooooooo")
-    let audio = new Audio('../../audio/insertCoin.mp3')
-    console.log(audio)
-    audio.play()
+  console.log(audio)
+  audio.play()
 } */
-
 
 export function Landing() {
   
@@ -28,7 +26,6 @@ export function Landing() {
         <Link to='/home' >
             <button id='boton' className='button'  /* onClick={sound} */ >Insert Coin</button>
         </Link>
-        <audio src=""></audio>
     </div>
   )
 };

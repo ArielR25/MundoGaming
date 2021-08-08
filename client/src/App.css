@@ -2,3 +2,59 @@
   margin: 0;
   padding: 0;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Otomanopee+One&display=swap');
+
+/* boton utilizado sobre todo en el panel lateral derecho */
+.Button3{
+  overflow: visible;
+  display: inline-block;
+  padding: 4px 6px;
+  border: 1px solid #e74c3c;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color: black;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  zoom: 1;
+  color: #e74c3c;
+  font-family:'Arial';
+}
+
+/* boton utilizado con el contenido Home */
+.Button4{
+  overflow: visible;
+  display: inline-block;
+  padding: 4px 6px;
+  border: 1px solid #e74c3c;
+  margin: 10px;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  background-color: black;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  border-radius: 0.2em;
+  zoom: 1;
+  color: #e74c3c;
+  font-family:'Arial';
+}
+
+/* clase utilizada para los titulos principales del panel de control */
+.h3Titles{
+  font-size: 30px;
+  letter-spacing: 8px;
+  display: flex;
+  flex-direction: column;
+  text-shadow: 0 0 4px #0a0a09, 0 0 4px #0f0e0e;
+}
+
+/* clase utilizada para los titulos secundario (h4) del panel de control */
+.h4Titles{
+  font-size: 24px;
+  letter-spacing: 5px;
+}

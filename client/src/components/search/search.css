@@ -1,13 +1,9 @@
-.search{
-    width: 100%;
-    display: flex;
-    justify-content: left;
-}
 .searchForm{
+    height: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 }
 .labelcss{
     font-size: 30px;
@@ -15,21 +11,16 @@
 }
 .searchText{
     background-color: rgb(211, 208, 208);
-    border:none;
-    margin-bottom: 5px;
-    padding: 3px 2px;
     border: none;
     border-radius: 3px;
     font-size: 18px;
     padding: 10px 10px 10px 5px;
     display :block;
-    width: 300px;
-    
+    width: 90%;
 }
-
-
-
-
 .searchButton:active{
     background-color:darkslategrey ;
 }
+
+/* Button3 styles in App.css*/
+/* h3Titles se encuentra en App.css */

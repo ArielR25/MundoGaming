@@ -46,7 +46,7 @@ export function Origin_Filter (props) {
                 <span className='radioSpan'>Origen</span>
             </label>
             <CheckList items={origin} id='originList' type='o'/>
-            <button id='originButton' className='Buton3' onClick={originCheckLooks}>Filtrar</button>
+            <button id='originButton' className='Button3' onClick={originCheckLooks}>Filtrar</button>
         </div>
     )
 }

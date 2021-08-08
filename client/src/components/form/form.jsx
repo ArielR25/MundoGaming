@@ -107,7 +107,7 @@ export function Form(props) {
     return (
         <div className='divForm'>
             <Link to='/home'>
-                <button className='Buton4'>Home</button>
+                <button className='Button4'>Home</button>
             </Link>
             <div className='divFormZone'>
                 <form className='form' onSubmit={handleSubmit} >

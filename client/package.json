@@ -9,6 +9,7 @@
     "@wojtekmaj/enzyme-adapter-react-17": "^0.6.1",
     "install": "^0.13.0",
     "react": "^17.0.2",
+    "react-audio-player": "^0.17.0",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.4",
     "react-router-dom": "^5.2.0",

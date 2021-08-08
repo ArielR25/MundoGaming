@@ -9,10 +9,10 @@ function App() {
     <div className="App">
       
       {/* landing page, presentacion del sitio */}
-      <Route exact path='/' component={Landing}/>
+      <Route exact path='/' component = {Landing} />
 
       {/* todo el contenido de la página */}
-      <Route path='/home' component ={Home}/>
+      <Route path='/home' component = {Home} />
       
     </div>
   );

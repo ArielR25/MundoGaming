@@ -35,7 +35,7 @@ export function Details ({ details }) {
     return (
         <div>
             <Link to='/home'>
-                <button className='Buton4'>Home</button>
+                <button className='Button4'>Home</button>
             </Link>
             <div className='generalDetails'>
                 <div className='details'>

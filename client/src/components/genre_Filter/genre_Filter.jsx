@@ -42,7 +42,7 @@ export function Genre_Filter (props) {
                 <span className='radioSpan'>Generos</span>
             </label>
             <CheckList items={props.genres} id='genreList' type='g'/>
-            <button id='genreButton' className='Buton3' onClick={genreCheckLooks}>Filtrar</button>
+            <button id='genreButton' className='Button3' onClick={genreCheckLooks}>Filtrar</button>
         </div>
     )
 }

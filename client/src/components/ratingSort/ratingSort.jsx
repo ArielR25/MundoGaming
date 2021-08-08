@@ -12,21 +12,19 @@ export function RatingSort(props) {
 
     return (
         <div className='ratingSort'>
-            <h4 className='ratingTitle'>Valoración</h4>
-            <div className='ratinghOptions'>
-                <form>
-                    <fieldset className='ratingRadios' >
-                        <label className='rRadio'>
-                            <input type="radio" name="rating" value="higher" onClick={whoSelected}/>
-                            <span class='radioSpan'>Mayor</span>
-                        </label>
-                        <label className='rRadio'>
-                            <input type="radio" name="rating" value="lower" onClick={whoSelected}/>
-                            <span class='radioSpan'>Menor</span>
-                        </label>
-                    </fieldset>
-                </form>
-            </div>
+            <h4 className='h4Titles'>Valoración</h4>
+            <form>
+                <fieldset className='ratingRadios' >
+                    <label className='rRadio'>
+                        <input type="radio" name="rating" value="higher" onClick={whoSelected}/>
+                        <span class='radioSpan'>Mayor</span>
+                    </label>
+                    <label className='rRadio'>
+                        <input type="radio" name="rating" value="lower" onClick={whoSelected}/>
+                        <span class='radioSpan'>Menor</span>
+                    </label>
+                </fieldset>
+            </form>
         </div>
     )
 }
