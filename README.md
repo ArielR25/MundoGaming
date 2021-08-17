@@ -1,168 +1,87 @@
-<p align='left'>
-    <img src='https://static.wixstatic.com/media/85087f_0d84cbeaeb824fca8f7ff18d7c9eaafd~mv2.png/v1/fill/w_160,h_30,al_c,q_85,usm_0.66_1.00_0.01/Logo_completo_Color_1PNG.webp' </img>
-</p>
+# Bienvenid@ a Mundo Gaming 🚀
 
-# Individual Project - Henry Videogames
+---
 
-<p align="right">
-  <img height="200" src="./videogame.png" />
-</p>
+Esta es una API de video juegos 🎮, que muestra información de los mismos y permite al usuario interactuar de diversas maneras explicadas a continuación:
 
-## Objetivos del Proyecto
+1 - Ver las diferentes características de cada video juego.
 
-- Construir una App utlizando React, Redux, Node y Sequelize.
-- Afirmar y conectar los conceptos aprendidos en la carrera.
-- Aprender mejores prácticas.
-- Aprender y practicar el workflow de GIT.
-- Usar y practicar testing.
+2 - Interactuar con la página en un menú con cuatro funcionalidades diferentes:
 
-## Horarios y Fechas
+🔎 Búsqueda: permite escribir el nombre de un video juego o parte del mismo y se podrán ver todos los juegos que coincidan con el texto.
 
-El proyecto tendrá una duración máxima de tres semanas. En el caso de que completan todas las tareas antes de dicho lapso podrán avisar a su Instructor para coordinar una fecha de presentación del trabajo (DEMO).
+:twisted_rightwards_arrows: Filtrado: permite filtrar los juegos por su genero o por su origen, siento este ultimo, local o de la API rawg.io. Aclaración: se puede buscar mas de un genero a la vez y se puede combinar el filtrado con el origen del video juego.
 
-## Comenzando
+:abc: Ordenamiento: se pueden ordenar los video juegos alfabeticamente y por valoración, tambíen es posible combinar esta acción con los filtrados.
 
- 1. Se debe iniciar git con `git init`
- 2. Crear en su cuenta de GitHub un nuevo repo con el nombre `PI-Videogames-FT__` donde `__` es el numero de cohorte en el que estas
- 3. Hacer un commit inicial ej: `git add .` => `git commit -m "init"` => `git branch -M main`
- 4. Seguir las instrucciones de GitHub para 'conectar' su repositorio local con GitHub `git remote add........`
- 5. Hacer push de ese commit `git push -u origin main`
- 6. No olvidar que deben regularmente hacer commit y push para mantener el repo actualizado en la nube
+:raised_hands: Creación: en esta sección se pueden crear video juegos, los cuales son los que entran en la categoría local.
 
-Tendrán un `boilerplate` con la estructura general tanto del servidor como de cliente.
+3 - Detalles: cada video juego tiene un boton asociado que permite consultar los detalles del mismo.
 
-__IMPORTANTE:__ Es necesario contar minimamente con la última versión estable de Node y NPM. Asegurarse de contar con ella para poder instalar correctamente las dependecias necesarias para correr el proyecto.
+4 - Paginado: la pagina dispone de un paginado para ir viendo los juegos de ocho en ocho, para ello hay dos botones cerca de la parte superior derecha de la pantalla.
 
-## BoilerPlate
+---
 
-El boilerplate cuenta con dos carpetas: `api` y `client`. En estas carpetas estará el código del back-end y el front-end respectivamente.
+### A continuación te dejo unas imagenes de ilustración :smiley:
 
-En `api` crear un archivo llamado: `.env` que tenga la siguiente forma:
+![image](https://user-images.githubusercontent.com/82990938/129046269-491d910d-a05f-4f1c-b90e-31f182980f0a.png)
 
-```
-DB_USER=usuariodepostgres
-DB_PASSWORD=passwordDePostgres
-DB_HOST=localhost
-```
+![image](https://user-images.githubusercontent.com/82990938/129046986-fcd236dd-f10d-4fef-9685-3777b629e045.png)
 
-Reemplazar `usuariodepostgres` y `passwordDePostgres` con tus propias credenciales para conectarte a postgres. Este archivo va ser ignorado en la subida a github, ya que contiene información sensible (las credenciales).
+![image](https://user-images.githubusercontent.com/82990938/129054712-a7fcc4f0-90f1-4503-b1c8-c187f7a76f0b.png)
 
-Adicionalmente será necesario que creen desde psql una base de datos llamada `videogames`
+( OK, si son las imagenes de mi portada de Github :joy::joy::joy:)
 
-El contenido de `client` fue creado usando: Create React App.
+---
 
-## Enunciado
+## Bueno, viene la parte nerd 🤓 , ahora explico como hacer andar el proyecto en tu pc :grin:
 
-La idea general es crear una aplicación en la cual se puedan ver los distintos videojuegos disponibles junto con información relevante de los mismos utilizando la api externa [rawg](https://rawg.io/apidocs) y a partir de ella poder, entre otras cosas:
+1 - Abrir la consola gitbash en la carpeta donde quieras instalar el proyecto
 
-  - Buscar videjuegos
-  - Filtrarlos / Ordenarlos
-  - Agregar nuevos videojuegos
+2 - Ejecutar el comando git clone https://github.com/ArielR25/MundoGaming
 
-__IMPORTANTE__: Para poder utilizar esta API externa es necesario crearse una cuenta para obtener una API Key que luego debera ser incluida en todos los request que hagamos a rawg simplemente agregando `?key={YOUR_API_KEY}` al final de cada endpoint. Agregar la clave en el archivo `.env` para que la misma no se suba al repositorio por cuestiones de seguridad y utilizarla desde allí.
+3 - Una vez descargado, abrir la consola en la carpeta api dentro del proyecto y ejecutar el comando: npm install
 
-__IMPORTANTE__: Para las funcionalidades de filtrado y ordenamiento NO pueden utilizar los endpoints de la API externa que ya devuelven los resultados filtrados u ordenados sino que deben realizarlo ustedes mismos. En particular alguno de los ordenamientos o filtrados debe si o si realizarse desde el frontend.
+4 - Similar a la instrucción anterior, se debe abrir la consola en la carpeta client y ejecutar el comando: npm install
 
-### Únicos Endpoints/Flags que pueden utilizar
+5 - Para hacer andar el back, nuevamente parado en la carpeta api, ejecutar la instrucción: npm start
 
-  - GET https://api.rawg.io/api/games
-  - GET https://api.rawg.io/api/games?search={game}
-  - GET https://api.rawg.io/api/genres
-  - GET https://api.rawg.io/api/games/{id}
+6 - Ahora para hacer andar el front, desde la carpeta client, ejecutar el comando: npm start
 
-### Requerimientos mínimos:
+Listo!! ya tenes la página andando!!
 
-A continuación se detallaran los requerimientos mínimos para la aprobación del proyecto individial. Aquellos que deseen agregar más funcionalidades podrán hacerlo. En cuanto al diseño visual no va a haber wireframes ni prototipos prefijados sino que tendrán libertad de hacerlo a su gusto pero tienen que aplicar los conocimientos de estilos vistos en el curso para que quede agradable a la vista.
+Bueno... casi... :trollface:
 
-__IMPORTANTE__: No se permitirá utilizar librerías externas para aplicar estilos a la aplicación. Tendrán que utilizar CSS con algunas de las opciones que vimos en dicha clase (CSS puro, CSS Modules o Styled Components)
+Resulta que para que ande la conexión a la API rawg.io, es necesario enviarle unas credenciales, para ello, debes tener una cuenta en la misma y pedir una key, esto por desgracia no te lo puedo facilitar pero puedo indicarte como conseguirla :wink:
 
-#### Tecnologías necesarias:
-- [ ] React
-- [ ] Redux
-- [ ] Express
-- [ ] Sequelize - Postgres
+1 - vas a este link: https://rawg.io/
 
-#### Frontend
+2 - Aquí tenes diferentes formas de registrarte, elegí la que mes te guste :satisfied:
 
-Se debe desarrollar una aplicación de React/Redux que contenga las siguientes pantallas/rutas.
+![image](https://user-images.githubusercontent.com/82990938/129660053-3c233772-d506-4a2c-93b4-790a5b2b4e53.png)
 
-__Pagina inicial__: deben armar una landing page con
-- [ ] Alguna imagen de fondo representativa al proyecto
-- [ ] Botón para ingresar al home (`Ruta principal`)
+3 - Una vez dentro vas a donde dice API:
 
-__Ruta principal__: debe contener
-- [ ] Input de búsqueda para encontrar videojuegos por nombre
-- [ ] Área donde se verá el listado de videojuegos. Deberá mostrar su:
-  - Imagen
-  - Nombre
-  - Géneros
-- [ ] Botones/Opciones para filtrar por género y por videojuego existente o agregado por nosotros
-- [ ] Botones/Opciones para ordenar tanto ascendentemente como descendentemente los videojuegos por orden alfabético y por rating
-- [ ] Paginado para ir buscando y mostrando los siguientes videojuegos
+![image](https://user-images.githubusercontent.com/82990938/129660224-ae1c54b1-252c-4d4f-9b47-ac6a7d751754.png)
 
-__IMPORTANTE__: Dentro de la Ruta Principal se deben mostrar tanto los videjuegos traidos desde la API como así también los de la base de datos. Debido a que en la API existen alrededor de 500 mil juegos, por cuestiones de performance pueden tomar la simplificación de obtener y paginar los primeras 100.
+4 - Y ahora a donde dice, Get API Key
 
-__Ruta de detalle de videojuego__: debe contener
-- [ ] Los campos mostrados en la ruta principal para cada videojuegos (imagen, nombre, y géneros)
-- [ ] Descripción
-- [ ] Fecha de lanzamiento
-- [ ] Rating
-- [ ] Plataformas
+![image](https://user-images.githubusercontent.com/82990938/129660345-e39f1b77-cf1e-4293-83aa-14b4c625c929.png)
 
-__Ruta de creación de videojuegos__: debe contener
-- [ ] Un formulario __controlado__ con los siguientes campos
-  - Nombre
-  - Descripción
-  - Fecha de lanzamiento
-  - Rating
-- [ ] Posibilidad de seleccionar/agregar varios géneros
-- [ ] Posibilidad de seleccionar/agregar varias plataformas
-- [ ] Botón/Opción para crear un nuevo videojuego
+5 - Aquí tendras tu Key:
 
-#### Base de datos
+![image](https://user-images.githubusercontent.com/82990938/129660534-5451c621-2475-4ca4-88c3-a29d0f333cf0.png)
 
-El modelo de la base de datos deberá tener las siguientes entidades (Aquellas propiedades marcadas con asterísco deben ser obligatorias):
+6 - Ahora toca meter la Key en el codigo!! :smile:
 
-- [ ] Videojuego con las siguientes propiedades:
-  - ID: * No puede ser un ID de un videojuego ya existente en la API rawg
-  - Nombre *
-  - Descripción *
-  - Fecha de lanzamiento
-  - Rating
-  - Plataformas *
-- [ ] Genero con las siguientes propiedades:
-  - ID
-  - Nombre
+* Dentro de la carpeta api, creá el archivo .env y completa los campos como se muestra en la imagen:
 
-La relación entre ambas entidades debe ser de muchos a muchos ya que un videojuego puede pertenecer a varios géneros en simultaneo y, a su vez, un género puede contener múltiples videojuegos distintos. Un ejemplo sería el juego `Counter Strike` pertenece a los géneros Shooter y Action al mismo tiempo. Pero a su vez existen otros videojuegos considerados como Shooter o como Action.
+![image](https://user-images.githubusercontent.com/82990938/129660872-9bc46c36-3baf-427b-ac86-b18e8689afbd.png)
 
-__IMPORTANTE__: Pensar como modelar los IDs de los videojuegos en la base de datos. Existen distintas formas correctas de hacerlo pero tener en cuenta que cuando hagamos click en algun videojuego, este puede provenir de la API o de la Base de Datos por lo que cuando muestre su detalle no debería haber ambigüedad en cual se debería mostrar. Por ejemplo si en la API el videojuego `Age of Empires II: Age of Kings` tiene id = 1 y en nuestra base de datos creamos un nuevo videojuego `Age of Henry` con id = 1, ver la forma de diferenciarlos cuando querramos acceder al detalle del mismo.
+Y AHORA SIII!! ESO ES TODOO :relaxed::relaxed: :tada: :confetti_ball: :tada: :confetti_ball: :tada:
 
-#### Backend
+A DISFRUTAR DE LA API MUNDO GAMING!!!
 
-Se debe desarrollar un servidor en Node/Express con las siguientes rutas:
+like y suscribe
 
-__IMPORTANTE__: No está permitido utilizar los filtrados, ordenamientos y paginados brindados por la API externa, todas estas funcionalidades tienen que implementarlas ustedes.
-
-- [ ] __GET /videogames__:
-  - Obtener un listado de los primeras 15 videojuegos
-  - Debe devolver solo los datos necesarios para la ruta principal
-- [ ] __GET /videogames?name="..."__:
-  - Obtener un listado de las primeros 15 videojuegos que contengan la palabra ingresada como query parameter
-  - Si no existe ningún videojuego mostrar un mensaje adecuado
-- [ ] __GET /videogame/{idVideogame}__:
-  - Obtener el detalle de un videojuego en particular
-  - Debe traer solo los datos pedidos en la ruta de detalle de videojuego
-  - Incluir los géneros asociados
-- [ ] __GET /genres__:
-  - Obtener todos los tipos de géneros de videojuegos posibles
-  - En una primera instancia deberán traerlos desde rawg y guardarlos en su propia base de datos y luego ya utilizarlos desde allí
-- [ ] __POST /videogame__:
-  - Recibe los datos recolectados desde el formulario controlado de la ruta de creación de videojuego por body
-  - Crea un videojuego en la base de datos
-
-
-#### Testing
-- [ ] Al menos tener un componente del frontend con sus tests respectivos
-- [ ] Al menos tener una ruta del backend con sus tests respectivos
-- [ ] Al menos tener un modelo de la base de datos con sus tests respectivos
+MUCHAS GRACIAS
