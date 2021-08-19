@@ -30,8 +30,6 @@ Esta es una API de video juegos 🎮, que muestra información de los mismos y p
 
 ![image](https://user-images.githubusercontent.com/82990938/129054712-a7fcc4f0-90f1-4503-b1c8-c187f7a76f0b.png)
 
-( OK, si son las imagenes de mi portada de Github :joy::joy::joy:)
-
 ---
 
 ## Bueno, viene la parte nerd 🤓 , ahora explico como hacer andar el proyecto en tu pc :grin:
